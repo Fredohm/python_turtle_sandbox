@@ -2,6 +2,7 @@ from turtle import Turtle, Screen
 from random import randint
 
 turtle = Turtle()
+turtle.hideturtle()
 screen = Screen()
 screen.screensize(1600, 900)
 turtle.speed("fastest")
