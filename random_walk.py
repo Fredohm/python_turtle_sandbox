@@ -1,5 +1,7 @@
 from turtle import Turtle, Screen
 from random import randint
+from main import change_color
+
 
 turtle = Turtle()
 turtle.hideturtle()
@@ -7,14 +9,6 @@ screen = Screen()
 screen.screensize(1600, 900)
 turtle.speed("fastest")
 turtle.pensize(8)
-
-
-def change_color():
-    red = randint(0, 255)
-    green = randint(0, 255)
-    blue = randint(0, 255)
-    screen.colormode(255)
-    turtle.color(red, green, blue)
 
 
 def change_direction():
@@ -27,7 +21,7 @@ def change_direction():
 
 index = 0
 while index < 1000:
-    change_color()
+    turtle = change_color(turtle, screen)
     change_direction()
     turtle.forward(20)
     index += 1

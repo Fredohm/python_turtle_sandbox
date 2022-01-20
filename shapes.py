@@ -1,5 +1,6 @@
 from turtle import Turtle, Screen
 from random import randint
+from main import change_color
 
 turtle = Turtle()
 turtle.speed("slow")
@@ -14,18 +15,10 @@ def draw_shapes(num_sides):
         turtle.right(angle)
 
 
-def change_color():
-    r = randint(0, 256)
-    g = randint(0, 256)
-    b = randint(0, 256)
-    screen.colormode(255)
-    turtle.color(r, g, b)
-
-
 sides = 3
 
 while sides < 11:
-    change_color()
+    change_color(turtle, screen)
     draw_shapes(sides)
     sides += 1
 
