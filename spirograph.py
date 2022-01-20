@@ -7,15 +7,14 @@ turtle.speed("fastest")
 
 screen = Screen()
 
-angle = 0
 begin_position = turtle.position()
 print(begin_position)
 print(turtle.position())
 
-while angle < 361:
+size_of_gap = 3
+for _ in range(int(360 / size_of_gap)):
     turtle = change_color(turtle, screen)
     turtle.circle(100)
-    turtle.left(angle)
-    angle += 1
+    turtle.setheading(turtle.heading() + size_of_gap)
 
 screen.exitonclick()
