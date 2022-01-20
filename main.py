@@ -8,3 +8,4 @@ def change_color(turtle, screen):
     screen.colormode(255)
     turtle.color(red, green, blue)
     return turtle
+
